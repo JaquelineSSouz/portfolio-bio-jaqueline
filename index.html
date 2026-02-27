@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+</head>
+<body> 
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Habilidades</a></li>
+                <li><a href="#trabalhos_academicos">Trabalhos Acadêmicos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <div class="card card-com-foto" id="sobre">
+            <img src="img/meu_perfil.jpg" alt="Estudante de Gestão de TI" class="card-img">
+            <div class="card-content">
+                <h2>Perfil Acadêmico</h2>
+                <p>Me chamo Jaqueline Santana.</p>
+                <p>Sou estudante de Gestão da Tecnologia da Informação no Eniac e estou iniciando minha carreira na área de tecnologia</p>
+            </div>
+        </div>
+
+        <div class="card">
+
+            <div class="card-content">
+                <h2>Habilidades e Cursos</h2>
+
+                <div class="habilidades-icones">
+
+                    <div class="icone-habilidade">
+                        <img src="img/html-5.png" alt="HTML5" class="icone-img">
+                        <p>HTML5</p>
+                    </div>
+
+                    <div class="icone-habilidade">
+                        <img src="img/css-3.png" alt="CSS3" class="icone-img">
+                        <p>CSS3</p>
+                    </div>
+
+                    <div class="icone-habilidade">
+                        <img src="img/js.png" alt="JavaScript" class="icone-img">
+                        <p>JavaScript</p>
+                    </div>
+
+                </div>
+
+                <h3>Certificações e Cursos</h3>
+                <ul class="lista-cursos">
+                    <li>Git e GitHub (Alura)</li>
+                    <li>Lógica de Programação (Alura)</li>
+                    <li>Começando em Programação (Alura)</li>
+                    <li>Implantação de Redes Locais (Senai)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="card" id="trabalhos_academicos">
+            <div class="card-content">
+                <h2>Projeto Acadêmico: Portfólio Pessoal (Este Site)</h2>
+
+                <div class="projeto-academico">
+                    <h3>Desenvolvimento de Portfólio Web Responsivo</h3>
+                    <p><strong>Objetivo:</strong> Criar uma página web profissional e responsiva para apresentar meu perfil, habilidades e projetos acadêmicos, aplicando conhecimentos de HTML, CSS e boas práticas de desenvolvimento</p>
+
+                    <h4>Partes do Projeto e Habilidades Aplicadas:</h4>
+                    <ul class="lista-projetos">
+                        <li><strong>Estrutura (HTML):</strong> Utilização de tags semânticas (header, main, footer, nav) para acessibilidade e SEO.</li>
+                        <li><strong>Estilização (CSS):</strong> Aplicação de Flebox para layout (card com foto, ícones de habilidades), design responsivo e estilização de componentes (menu, cards).</li>
+                        <li><strong>Design:</strong> Implementação de um design limpo e moderno, com foco na experiência do usuário (UX).</li>
+                        <li><strong>Versionamento</strong> Uso de Git para controle de versão de código.</li>
+                    </ul>
+
+                    <p>
+                        Este projeto demonstra a aplicação prática das habilidades adquiridas com base em meus cursos e vivências acadêmicas.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="contatos">
+            <div class="card-content">
+                <h2>Contatos</h2>
+
+                <ul class="contatos-lista">
+
+                    <li class="contato-item">
+                        <img src="img/linkedin.png" alt="LinkedIn" class="contato-icone">
+                        <a href="https://www.linkedin.com/in/jaqueline-santana-aa5572238" target="_blank"> <!-- link abra em uma nova aba ou janela do navegador-->
+                            LinkedIn: Jaqueline Santana
+                        </a>
+                    </li>
+
+                    <li class="contato-item">
+                        <img src="img/gmail.png" alt="Gmail" class="contato-icone">
+                        <a href="mailto:santanasouzajaque928@gmail.com">   <!--O mailto é um protocolo de URL usado em links HTML para criar um atalho que inicia o processo de envio de um e-mail.-->
+                            Gmail: santanasouzajaque928@gmail.com
+                        </a>                          
+                    </li>
+
+                    <li class="contato-item">
+                        <img src="img/whatsapp.png" alt="Whatsapp" class="contato-icone">
+                        <a href="https://wa.me/5511978258633" target="_blank">
+                            Whatsapp: (11) 97825-8633
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card" id="contato-form">
+            <div class="card-content">
+                <h2>Entre em Contato</h2>
+
+                <form id="contactForm">
+                    
+                    <!--Campo do nome-->
+                    <div class="form-grupo">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                
+                    </div>
+
+                    <!--Campo do e-mail-->
+                    <div class="form-grupo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                    </div>
+
+                    <!--Campo Mensagem-->
+                    <div class="form-grupo">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                    </div>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+
+                <!---Mensagem de sucesso-->
+
+                <p id="responseMessage" style="display: none;"></p>
+            </div>
+        </div>
+    </main>
+     
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Jaqueline Santana. Todos os direitos reservados</p>
+            <nav class="footer-nav">
+                <a href="#">Política de Privacidade</a>
+            </nav>
+        </div>
+    </footer>
+   <script src="form_handler.js"></script>
+</body>
+</html>

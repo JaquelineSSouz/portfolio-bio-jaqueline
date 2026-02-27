@@ -123,8 +123,6 @@
                 <h2>Entre em Contato</h2>
 
                 <form action="https://formspree.io/f/mwpwgyog" method="POST">
-
-                    <input type="hidden" name="_next" value="https://jaquelinessouz.github.io/portfolio-bio-jaqueline/">
                     
                     <!--Campo do nome-->
                     <div class="form-grupo">
@@ -165,5 +163,13 @@
             </nav>
         </div>
     </footer>
+    <script>
+        window.addEventListener("load", function() {
+            const form = document.querySelector("form");
+            if (form) {
+                form.reset();
+            }
+        });
+    </script>
 </body>
 </html>

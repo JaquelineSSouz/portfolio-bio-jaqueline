@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *'); //permite requisições de qualquer origem (ajuste em produção)
 header('Access-Control-Allow-Methods: POST');
-header('Acess-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Headers: Content-Type');
 
 //Configurações do Banco de Dados (MySQL via XAMPP)
 //Assumindo as configurações padrão do XAMPP e o nome do banco de dados "database"
@@ -40,10 +40,10 @@ $mensagem = $data['message'] ?? '';
 
 // Preparar a query SQL para inserção
 // Assumindo que a tabela 'contato' tenha as colunas: nome, email, mensagem
-$stmt = $conn->prepare("INSERT INTO $tablename (nome, email, mensagem) VALUES (?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO $tablename (nome, email, mensagem) VALUES (?, ?, ?)");
 
 // Verifica se a preparação da query foi bem-sucedida
-if ($smt === false) {
+if ($stmt === false) {
     http_response_code(500);
     echo json_encode(["success" => false, "message" => "Erro na preparação da query: " . $conn->error]);
     exit();
@@ -58,7 +58,7 @@ if ($stmt->execute()) {
     echo json_encode(["success" => true, "message" => "Dados salvos com sucesso na tabela 'contato'!"]);
 } else {
     http_response_code(500);
-    echo json_encode(["sucess" => false, "message" => "Erro ao salvar os dados: " . $stmt->error]);
+    echo json_encode(["success" => false, "message" => "Erro ao salvar os dados: " . $stmt->error]);
 }
 
 // fechar conexão

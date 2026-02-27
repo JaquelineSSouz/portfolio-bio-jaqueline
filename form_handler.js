@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const emailInput = document.getElementById('email');
         const messageInput = document.getElementById('message');
 
-        if (nomeInput.value.trim() === '') {
+        if (nameInput.value.trim() === '') {
             responseMessage.textContent = 'Por favor, preencha seu nome.';
             temErro = true;
         } else if (emailInput.value.trim() === '') {
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('http://localhost/Minha bio/processa_formulario.php', {
+            const response = await fetch('http://localhost/Minha_bio/processa_formulario.php', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'aplication/json',
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data ),
             });
